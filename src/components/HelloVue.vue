@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div class="hello">
         <h1>hallo vue</h1>
     </div>
@@ -8,7 +8,7 @@
 console.log("Hello Vue");
 </script>
 
-<style lang="" scoped>
+<style scoped>
 .hello {
     color: green;
 }

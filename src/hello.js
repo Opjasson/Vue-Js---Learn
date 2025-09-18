@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
-import HelloVue from './components/HelloVue.vue'
+import { createApp } from "vue";
+import HelloVue from "./components/HelloVue.vue";
 
-createApp(HelloVue).mount("#app")
+createApp(HelloVue).mount("#app");
