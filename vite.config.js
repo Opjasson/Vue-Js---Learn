@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [vue()],
     build: {
         rollupOptions: {
+          // Regist setiap komponen baru untuk diproses vite
             input: {
                 index: "index.html",
                 hallo: "hallo.html",
