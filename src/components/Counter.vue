@@ -1,17 +1,19 @@
 <template>
-  <div></div>
+  <div>
+    <h1 id="count">Counter : {{ counter }}</h1>
+
+    <button v-on:click="increment">Add Counter</button>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "Test",
-  created() {},
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
-};
+<script setup>
+  let counter = 0;
+
+  function increment() {
+    counter++
+
+    document.getElementById("count").innerHTML = `Counter : ${counter}`
+  }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
