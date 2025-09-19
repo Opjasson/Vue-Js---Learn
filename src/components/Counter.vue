@@ -1,19 +1,32 @@
 <template>
-  <div>
-    <h1 id="count">Counter : {{ counter }}</h1>
+    <div>
+        <h1 id="count">Counter : {{ counter }}</h1>
+        <h1>Counter state : {{ stateCount }}</h1>
 
-    <button v-on:click="increment">Add Counter</button>
-  </div>
+        <button v-on:click="increment">Add Counter</button>
+
+        <br />
+        <!-- ------ -->
+        <button v-on:click="incrementState">Add Counter state</button>
+    </div>
 </template>
 
 <script setup>
-  let counter = 0;
+import { ref } from "vue";
 
-  function increment() {
-    counter++
+let counter = 0;
+let stateCount = ref(0);
 
-    document.getElementById("count").innerHTML = `Counter : ${counter}`
-  }
+// Counter using DOM
+function increment() {
+    counter++;
+    document.getElementById("count").innerHTML = `Counter : ${counter}`;
+}
+
+// Counter using reactive state
+function incrementState() {
+    stateCount.value++;
+}
 </script>
 
 <style scoped></style>
