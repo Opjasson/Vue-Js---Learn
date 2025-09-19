@@ -42,10 +42,13 @@ function incrementState() {
 
 // Complex object Reactive state
 function incrementComplex() {
-    objectEmploye.value = {
-      nama : objectEmploye.value.nama,
-      count : objectEmploye.value.count + 1000
-    }
+    // objectEmploye.value = {
+    //   nama : objectEmploye.value.nama,
+    //   count : objectEmploye.value.count + 1000
+    // }
+
+    objectEmploye.value.nama = "joyo"
+    objectEmploye.value.count++
 }
 </script>
 
