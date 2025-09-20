@@ -1,7 +1,10 @@
 <template>
     <div>
         <h1 :class="array">style</h1>
-        <h1 :class="{red : red, bold : bold}">style</h1>
+        <h1 :class="{ red: red, bold: bold }">style</h1>
+
+        <h1 :style="style1">Style Binding 1</h1>
+        <h1 :style="[style1, style2]">Style Binding 2</h1>
 
         <button v-on:click="toggleRed">Red</button>
         <button v-on:click="toggleBold">Bold</button>
@@ -17,13 +20,21 @@ const red = ref(false);
 const bold = ref(false);
 
 function toggleRed() {
-  red.value = !red.value
+    red.value = !red.value;
 }
 
 function toggleBold() {
-  bold.value = !bold.value
+    bold.value = !bold.value;
 }
 
+const style1 = {
+    color: "red",
+};
+
+const style2 = {
+    textTransform: "uppercase",
+    fontWeight: "bold",
+};
 </script>
 
 <style scoped>
