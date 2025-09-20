@@ -14,6 +14,7 @@ export default defineConfig({
                 sayhello: "sayhello.html",
                 style: "style.html",
                 conditonalRender: "conditional.html",
+                listRender: "listRendering.html",
             },
         },
     },
