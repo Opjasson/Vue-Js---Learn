@@ -13,6 +13,7 @@ export default defineConfig({
                 counter: "counter.html",
                 sayhello: "sayhello.html",
                 style: "style.html",
+                conditonalRender: "conditional.html",
             },
         },
     },
